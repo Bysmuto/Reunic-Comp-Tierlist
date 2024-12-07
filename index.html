@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="navbar">
+
+
+      <a class="menu_btn" href="/pages/About.html">About</a>
+      <a href="index.html">Comp Tierlist</a>
+      <a href="/pages/My Augment Stats.html">My Augment Stats</a>
+
+     
+      <div class="dropdown">
+        <button class="dropbtn">
+          Guiades
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/pages/TFT Dictionary.html">TFT Dictionary</a>
+          <a href="/pages/Item Tierlist.html">Item Tierlist</a>
+          <a href="/pages/Augment Theory.html">Augment Theory</a>
+          
+          <a href="/pages/Character Profiles.html">Character Profiles</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="Box_title">Reunic's Comp Tierlist</div>
+    <!-- Comp tier list -->
+    <div id="Box_tier_list">
+      <div id="Tier_list">
+        <div id="s_tier" class="Comp_tier">
+          <img
+            id="tier_icon_s"
+            class="tier_icon"
+            src="assets/tier icons/evolution 3.png"
+          />
+        </div>
+        <div id="a_tier" class="Comp_tier">
+          <img
+            id="tier_icon_a"
+            class="tier_icon"
+            src="assets/tier icons/evolution 2.png"
+          />
+        </div>
+        <div id="b_tier" class="Comp_tier">
+          <img
+            id="tier_icon_b"
+            class="tier_icon"
+            src="assets/tier icons/evolution 1.png"
+          />
+        </div>
+        <p></p>
+      </div>
+    </div>
+  </body>
+  <div class="build_info"></div>
+
+  <script>
+    let builds = [
+      {
+        tier: "s",
+        name: "(S-) Heimer Blackrose",
+        champion_icon: "Heimerdinger",
+        itemization: `Heimer = Blue + AP items<br>
+      Garen = Tank items (HP)<br>
+      Malzahar = Leftover AP items<br>
+      Item priority = Heimer > Garen > Malzahar`,
+        strategy: `Ideally played from a loss streak as the best ap item holders are more of the expensive unit however early blackrose can win streak.<br><br>
+      If loss streak, do not level and prioritise gold then at stage 3-2, level to 6 and roll for watchers + dominators/black rose units to stabilise, stay above 30 gold.<br><br>
+      After getting a couple of upgrades, save econ up and slowly push levels.<br><br>
+      If you can ideally you level to 8 at stage 4-2 with 30-40 gold to roll with, if not wait till stage 4-5 before rolling.<br><br>
+      This comp benefits a lot from econ augments as it is very contested so being able to roll before everyone else is super valuable.<br><br>
+      The black rose board is super flexible as multiple other carries use it as well so can flex into different comps.`,
+        options: `Flex into all the other black rose variations`,
+        lvl9: `Cap out by adding leblanc at 9`,
+        conditions: `Black rose spat, Crowns will, Powered Shield`,
+        augments: ``,
+        anomaly: `Heimer > Garen`,
+      },
+      {
+        tier: "a+",
+        name: "(A+) Silco Dominators",
+        champion_icon: "Silco",
+        itemization: `Silco = Shojin + 2 AP items<br>
+                  Mundo/Garen = Tank items<br>
+                  Mordekaiser = Leftover items<br>
+                  Item priority = Silco > Mundo`,
+        strategy: `Ideally played from a loss streak as the early dominators are 2-3 cost so lose streak all of stage 2 then at stage 3-2 level to 6 and ideally roll for a board with ziggs + bruisers/watchers/blackrose.<br><br>
+               Then look to push levels and level to 8 at either 4-2 or 4-5 and then roll for the board (need at least 40 gold leftover if you want to go lvl 8).<br><br>
+               If you do not find Mordekaiser than look to play 4 Dominators + more blackrose units.<br><br>
+               Silco benefits a lot from attack speed items to cast more often, even double shojin works well.<br><br>
+               Morello is not good on him, Red buff is okay because of the attack speed.`,
+        options: `Can play 6 Dominator instead. Can also play Garen as main tank`,
+        lvl9: `Can cap out with either Malzahar at 9 or Leblanc at 9. And drop Blitz for Mordekaiser. Can drop all the blackrose as well for just 4 dominator + legendaries`,
+        conditions: `Early tear/rod or tank item slam`,
+        augments: `Powered Shield, Blackrose spat, Long distance Pals`,
+        anomaly: `Silco > Mundo`,
+      },
+      {
+        tier: "a+",
+        name: "(A+) Ezreal Reroll",
+        champion_icon: "Ezreal",
+        itemization: `Ezreal = IE + Academy items<br>
+    Leona = Tank/Academy items<br>
+    Heimerdinger = Leftover AP items<br>
+    Item priority = Ezreal > Leona > Heimer`,
+        strategy: `You must first check what the academy items are, if any of the 3 items are items that are good for Ezreal (Infinity edge, Runaans hurricane, Red,, Deathblade, Last Whisper) then you are able to play the line, even better if 2 of 3 items are academy items.<br><br>
+    Ideally with reroll strategies you want to build up as much econ as you can so look to lose streak all of stage 2 holding all copies of leona and ezreal with sentinels. If you have a couple of copies of Leona and Ezreal before stage 3-2, I recommend leveling to 6 at stage 3-2 and roll to hit Ez 2 and Leona 2.<br><br>
+    If you do not have a couple, keep lose streaking until stage 3-5 and lvl to 7 and roll for upgrades. Once you hit majority of the board 2 star, look to regain gold back to 50 and slow roll excess gold until 3 star. If you are far from leona 3, just switch items to Illaoi 2 lategame.<br><br>
+    IMPORTANT = Every game academy has 3 different items, if those items are built and given to academy units they will gain damage amp + reduction, it is NOT only the academy items given from the trait. Therefore double up on the same academy items can be good.<br><br>
+    Ezreal ideally wants IE + 1 Atk spd item + Academy<br>
+    Leona ideally wants Redemption + Academy items`,
+        options: `If you get sentinel spat, can look to play 6 sentinel at 8`,
+        lvl9: `Caps out adding Jayce`,
+        conditions: `Good academy items`,
+        augments: `Academy spat, Investment strategy, Ghost of the past`,
+        anomaly: `Ezreal > Leona`,
+      },
+      {
+        tier: "a",
+        name: "(A-) Kog Watchers",
+        champion_icon: "KogMaw",
+        itemization: `Kog = Archangel > Gunblade > Guinsoo<br>
+                  Scar = Gargoyle + Resistances (Armor/MR)<br>
+                  Item priority = Kog > Scar`,
+        strategy: `Can be played with either winstreak or lose streak. Winstreak usually occurs with an early Maddie 2 with frontline and early guinsoo slammed.<br><br>
+               Make sure to level at correct intervals e.g lvl 4 at 2-1, lvl 5 at 2-5, lvl 6 at least 3-2.<br><br>
+               This comp you ideally hit all your units 2 star by around 3-5 at lvl 7 and think whether to keep rerolling for 3 star or push to level 8 then roll for 3 stars.<br><br>
+               If loss streaking, look to lose streak all of stage 2 and at stage 3-2 or 3-5 roll for Watcher 2 stars + Kog 2.<br><br>
+               If you have a couple of Kog and Scar, look to roll on 3-2, if none look to roll at 3-5. Kog is a lot better when you can get bis items for him which is why lose streaking feels good.`,
+        options: `Can play additional firelight units`,
+        lvl9: `Better to stay lvl 8 and roll for everything 3 star.`,
+        conditions: `Early rods`,
+        augments: `Investment strategy, Watcher crest, Rigged shop, Pandoras items, Trifecta`,
+        anomaly: `Scar > Kog'Maw`,
+      },
+      {
+        tier: "a+",
+        name: "(A+) Silco Blackrose",
+        champion_icon: "Silco",
+        itemization: `Silco = Shojin + 2 AP items<br>
+                  Mundo/Garen = Tank items<br>
+                  Mordekaiser = Leftover items<br>
+                  Item priority = Silco > Mundo`,
+        strategy: `Ideally played from a loss streak as the early dominators are 2-3 cost so lose streak all of stage 2 then at stage 3-2 level to 6 and ideally roll for a board with ziggs + bruisers/watchers/blackrose.<br><br>
+               Then look to push levels and level to 8 at either 4-2 or 4-5 and then roll for the board (need at least 40 gold leftover if you want to go lvl 8).<br><br>
+               If you do not find Mordekaiser than look to play 4 Dominators + more blackrose units.<br><br>
+               Silco benefits a lot from attack speed items to cast more often, even double shojin works well.<br><br>
+               Morello is not good on him, Red buff is okay because of the attack speed.`,
+        options: `Can play 6 Dominator instead. Can also play Garen as main tank`,
+        lvl9: `Can cap out with either Malzahar at 9 or Leblanc at 9. And drop Blitz for Mordekaiser. Can drop all the blackrose as well for just 4 dominator + legendaries`,
+        conditions: `Early tear/rod or tank item slam`,
+        augments: `Powered Shield, Blackrose spat, Long distance Pals`,
+        anomaly: `Silco > Mundo`,
+      },
+      {
+        tier: "a+",
+        name: "(A+) Elise Form Swap",
+        champion_icon: "Elise",
+        itemization: `Elise = Shojin + 2 AP items<br>
+    Garen = Tank items<br>
+    Item priority = Elise > Garen`,
+        strategy: `This comp is best played from loss streak ideally and roll on stage 3-2 to spike. This is because the best AP item holders are 2-3 cost units. So look to lose streak all of stage 2 prioritising making gold intervals without leveling, then at stage 3-2, level to 6 and roll for a stable board.<br><br>
+    Ideally, you have an upgraded 2/3 cost tank with an upgraded carry either, Swain, Cassiopeia, Kog’maw, or Ziggs. If you manage to streak all of stage 3 that is ideal and depending on how much gold you have, you may need to level to 8 at 4-5 or stage 4-2 if you have at least 30-40 gold to roll with.<br><br>
+    The most important thing for this comp is it is incredibly flexible. You do not have to play Elise carry and can play either Silco or Zoe. However, if you hit 1 Jayce on roll down, everything 1 star with 4 form can go fast 9 with an upgraded tank e.g., Swain.<br><br>
+    Ideally, you play 4 Role Swap late game. If you have leftover AD items play backline GP/Jayce and if you have leftover AP items play Swain backline or play Leblanc.<br><br>
+    This comp is usually very difficult to play due to how contested Elise is but quite powerful even at 1 stars.<br><br>
+    Garen 2 is extremely important for the frontline if all your other units are 1 star.<br><br>
+    Garen benefits from building raw HP items over resistances.`,
+        options: `Silco or Zoe, can also play Jayce backline carry late game`,
+        lvl9: `Max cap is drop Morgana for Leblanc and add Mordekaiser at 9 and play Cassiopeia over Nunu.`,
+        conditions: ``,
+        augments: `Reinfourcement, Raining gold, High Voltage, Glass Cannon, Mana flow`,
+        anomaly: `Elise > Garen`,
+      },
+      {
+        tier: "a-",
+        name: "(A-) Twitch Experiments",
+        champion_icon: "Twitch",
+        itemization: `Twitch = Red + Runaans/LW + AD item<br>
+    Mundo = Tank items<br>
+    Caitilyn/Kog = Leftover AD items<br>
+    Item Priority = Twitch > Mundo`,
+        strategy: `Prioritise maintaining an early winstreak or loss streak. If looking to winstreak, make sure to level at correct intervals e.g lvl 4 at 2-1, lvl 5 at 2-5, lvl 6 at least 3-2.<br><br>
+    This comp you ideally can go 9 to cap out with legendaries and to get more frontline. If loss streaking, look to lose streak all of stage 2 and at stage 3 roll for an upgraded frontline along with Zeri 2 as that will stabilize mid game. Then depending on how much you rolled, look to roll again at lvl 8 at either 4-2 or 4-5, be sure you have at least 35 gold to roll with.<br><br>
+    This comp is very dependant on upgrading frontline, if you are relatively healthy 1 star twitch with a 2 star Mundo is definitely stable enough for you to push 9 but in the reverse it is not. Can also itemize Nunu 2 with Twitch 2 and then go 9.`,
+        options: `Can play Silco if you have lots of leftover AP items`,
+        lvl9: `Replace Renni with Elise and add Caitlyn over Kog at 9. Add Vi at 9. Replace Blitz with Mordekaiser.`,
+        conditions: `Early bow or sword drop with a good early game.`,
+        augments: `Combat or Econ augments`,
+        anomaly: `Mundo > Twitch`,
+      },
+      {
+        tier: "A+",
+        name: "(A+) Ambusher Reroll",
+        champion_icon: "Camille",
+        itemization: `Camille = Eon + Titans + HoJ<br>
+    Garen/Scar = Tank items<br>
+    Powder = Static + Morello<br>
+    Smeech/Jinx = AD items<br>
+    Item priority = Ekko > Garen`,
+        strategy: `Best play this comp from a loss streak unless you have Camille 2. Look to roll at stage 3-2 to level to 6 to roll down for board. At stage 3-2, look to level to 6 and roll for at least 2 star Camille + upgraded frontline. Then look to save up gold and try to push to level 7 before you start to slow roll for 3 star Camille and Smeech.<br><br>
+    Late game fights position opposite side if opponent is clumped, if not position opposite side.`,
+        options: ``,
+        lvl9: `Add Jinx at 9 and replace Maddie with Caitlyn. If you get Jinx on 8, play over Maddie.`,
+        conditions: ``,
+        augments: `Overheal, Sated spellweaver`,
+        anomaly: `Ekko > Garen`,
+      },
+      {
+        tier: "B",
+        name: "(B) Tristana Reroll",
+        champion_icon: "Tristana",
+        itemization: `Tristana = Guinsoo + Gunblade + AD item<br>
+    Leona/Loris = Tank items<br>
+    Item priority = Tristana > Tank`,
+        strategy: `Ideally you get early Tristana with early AD items so you can stack up Tristana early. Look to either winstreak or lose streak early game. Ideally only play this comp with early Tristana with good frontline and gloves. By stage 3-2 you should be lvl 6 with Leona 2, Tristana 2 and 4 Sentinel + 2 Artillerist. Save econ back up to 50 and slow roll excess gold until you 3 star Trist and Leona if you are lucky. Push levels to add more Artillerist in at 8.<br><br>
+    Fishbones Trist is incredibly strong.`,
+        options: `Can play tempo instead and pivot to Sentinel Corki instead.`,
+        lvl9: `Max cap you can look to play 6 Sentinel or just add in Rumble with random legendaries.`,
+        conditions: `Early sword`,
+        augments: `Investment strategy, Ghost of the Past, Portable Forge. Spirit link`,
+        anomaly: `Tristana > Leona`,
+      },
+      {
+        tier: "A+",
+        name: "(A+) Family Reroll (Punch punch)",
+        champion_icon: "Violet",
+        itemization: `Violet = IE + HoJ + EoN/QSS<br>
+    Vander = Tank items<br>
+    Item priority = Violet > Vander = Vi = Draven`,
+        strategy: `Early game you ideally look to lose streak as you are not able to level and prioritize getting Violet best items. At stage 3-1, roll down to 30 gold hitting all copies of the family units + Draven and Darius. Rebuild your economy back up to 50 and slow roll excess gold until you 3 star your units. Once you 3 star Violet, the others are less important unless you are very close then you can try to reroll for them (7-8 copies). Once hit, push levels to add in more pit fighters. Family spat normally goes on Vi/Sevika late game.<br><br>
+    You must make sure you have at least 60 gold before the anomaly to 100% confirm you will get ultimate hero anomaly.<br><br>
+    Make sure you scout early game to make sure you have no one contesting you.`,
+        options: `No pivot if you commit to this.`,
+        lvl9: `Max cap is more Pit fighters.`,
+        conditions: `Early sword and many Violets early`,
+        augments: `Superstars, One for all, Family spat`,
+        anomaly: `Violet >>> Draven`,
+      },
+      {
+        tier: "A+",
+        name: "(A+) Zoe 7 Rebels",
+        champion_icon: "Zoe",
+        itemization: `Ambessa = Edge of Night + 2 AD items<br>
+    Illaoi = Tank items<br>
+    Zoe = Shojin/Guinsoo + 2 AP items<br>
+    Item priority = Zoe > Illaoi = Ambessa`,
+        strategy: `This comp is a very expensive comp as it has many 4 cost units. Ideally best played with an econ augment and item augments to itemize everyone thus econ is priority. Either full winstreak and level at the correct intervals e.g lvl 4 at 2-1, lvl 5 at 2-5, lvl 6 at least 3-2. If lose streaking, lose streak all of stage 2 and stabilize on stage 3-2 for a stronger board. Look to play for a bruiser or sentinel board. Prioritze Zoe items > Ambessa.<br><br>
+    This comp is a lot better with Rebel spat as you can drop the Ezreal. This comp is quite flexible as you can play around Ekko or Corki or Ambessa as your secondary. Ekko only good if you hit the Jinx on your roll down. If you do not have Jinx, play 5 Rebels with Swain. Zoe are very good with attack speed items like guinsoo or nashors since it synergies with rebel trigger. 2 Sorcerer is not mandatory for Zoe.`,
+        options: `Corki carry, Ekko carry, Ambessa carry`,
+        lvl9: `Max cap is itemizing jinx with 3 items with Ambusher in and she will solo fights damage wise.`,
+        conditions: `Can be played from anything`,
+        augments: `Econ or item augments`,
+        anomaly: `Illaoi = Zoe > Ambessa`,
+      },
+      {
+        tier: "A-",
+        name: "(A-) Corki Sentinels",
+        champion_icon: "Corki",
+        itemization: `Corki = Gunblade + AD items<br>
+    Illaoi = Tank items (Resistances)<br>
+    Item priority = Corki > Illaoi`,
+        strategy: `AD comps are much better to winstreak with as items are very flexible, look to try slam good earlygame items like sunfire and level at the right intervals, lvl 4 at 2-1, 5 at 2-5, 6 at 3-2 and at least 8 at 4-2 if you have 40 gold to roll with.<br><br>
+    This comp is really important to play 6 Sentinels so look for that, can also play heimer instead of corki if you have lots of ap items instead. Gunblade is the most important since this is a front to back comp. This comp super benefits from just combat or econ augments. Don’t need to itemize anyone else until lategame when you go 9 and add Jayce/Heim.`,
+        options: `Play Heim carry over Corki`,
+        lvl9: `Add jayce at 9`,
+        conditions: `Can be played from anything`,
+        augments: `Combat or Item Augments`,
+        anomaly: `Ambessa/Illaoi > Heim`,
+      },{
+  tier: "A",
+  name: "(A) Heim Academy Sentinels",
+  champion_icon: "Heimerdinger",
+  itemization: `Heimerdinger = Blue + AP items<br>
+    Illaoi = Tank items<br>
+    Jayce/Rumble = Leftover items<br>
+    Item priority = Heimer > Illaoi`,
+  strategy: `Prioritise maintaining an early winstreak or loss streak. If looking to winstreak, make sure to level at correct intervals e.g lvl 4 at 2-1, lvl 5 at 2-5, lvl 6 at least 3-2.<br><br>
+    This comp you ideally can go 9 to cap out with legendaries and to get more frontline. If loss streaking, look to lose streak all of stage 2 and at stage 3 roll for an upgraded frontline along with Ziggs or Nami 2 as that will stabilize mid game. Then depending on how much you rolled, look to roll again at lvl 8 at either 4-2 or 4-5, be sure you have at least 35 gold to roll with.<br><br>
+    This comp is much better on win streak with an early Lux 2 as well as Sentinel frontline with 3 Academy in. Try to find out what your academy items are early to decide how many heimerdinger items you need. This is why there is less priority to get all 3 Heim items straight away.<br><br>
+    This comp is less dependant on item augments and better to have combat or econ augments`,
+  options: `Can choose to play 6 Sentinels and drop more Academy units`,
+  lvl9: `Replace Loris with Rumble who holds ap items and add Jayce at 9 who can either hold tank items or ad items in backline.`,
+  conditions: `Early tear or tank item slam`,
+  augments: `Combat e.g noble sacrifice or Econ augments e.g raining gold`,
+  anomaly: `Heim > Illaoi`,
+},
+{
+  tier: "A",
+  name: "(A) Ambessa Sentinels 2.0",
+  champion_icon: "Ambessa",
+  itemization: `Ambessa = Edge of Night + 2 AD items<br>
+    Illaoi = Evenshroud + Tank items<br>
+    Heimerdinger = Shojin + Morello<br>
+    Item priority = Ambessa > Illaoi = Heim`,
+  strategy: `Ideally you look to lose streak with this comp due to how cheap the board and how strong it can be on a stage 3-2 roll down but can also prioritise an early winstreak as well. If winstreak, make sure to level at correct intervals e.g lvl 4 at 2-1, lvl 5 at 2-5, lvl 6 at least 3-2.<br><br>
+    If loss streaking, look to lose streak all of stage 2 and at stage 3 roll for a Sentinel board with Akali and Nocturne upgrades with either as item holders. Then depending on how much you rolled, look to roll again at lvl 8 at either 4-2 or 4-5, be sure you have at least 35 gold to roll with.<br><br>
+    This comp will be a solid top 4 comp if the traits are decent and can easily cap out as well.<br><br>
+    Extremely flexible board as you can go corki carry instead as well`,
+  options: `Play Corki carry with Heim`,
+  lvl9: `For max cap you drop both Heim + Ezreal + Leona for Ekko + Jinx + Malzahar + Rumble.`,
+  conditions: `Can be played from anything`,
+  augments: `Combat or Item Augments`,
+  anomaly: `Ambessa/Illaoi > Heim`,
+}
+
+    ];
+    console.log(builds);
+    let tier_s = $("#s_tier");
+    let tier_a = $("#a_tier");
+    let tier_b = $("#b_tier");
+
+    for (let i = 0; i < builds.length; i++) {
+      let build_obj = builds[i];
+      let {
+        tier,
+        name,
+        champion_icon,
+        itemization,
+        strategy,
+        options,
+        lvl9,
+        conditions,
+        augments,
+        anomaly,
+      } = build_obj;
+
+      function showbuild(build) {
+        const name = build.dataset.name;
+        const tier = build.dataset.tier;
+        const champion_icon = build.dataset.champion_icon;
+        const itemization = build.dataset.itemization;
+        const strategy = build.dataset.strategy;
+        const options = build.dataset.options;
+        const lvl9 = build.dataset.lvl9;
+        const conditions = build.dataset.conditions;
+        const augments = build.dataset.augments;
+        const anomaly = build.dataset.anomaly;
+
+        const currentChild = build.parentElement;
+
+        // Check if any build information div is currently open
+        let openBuild = document.querySelector(".build_open");
+
+        // Remove the 'clicked' class from all buttons to hide squares
+        let allButtons = document.querySelectorAll(".Comp_icon");
+        allButtons.forEach((btn) => {
+          if (btn !== build) {
+            btn.classList.remove("clicked"); // Hide square for all other buttons
+          }
+        });
+
+        // Toggle visibility of the square for the clicked button
+        build.classList.toggle("clicked");
+
+        // If a build is already open and it's the same one that is clicked, close it
+        if (openBuild && openBuild.id === name) {
+          openBuild.remove(); // Close the current build
+          return; // Exit the function to not open the build again
+        }
+
+        // If a different build is open, remove it
+        if (openBuild) {
+          openBuild.remove(); // Close the previously opened build
+        }
+
+        // Create and open the new build info
+        const build_open = document.createElement("div");
+        build_open.className = "build_open";
+        build_open.id = name;
+        build_open.innerHTML = `
+    <h1>${name}</h1>
+    <img src="assets/builds/${name}.png" alt="" srcset="">
+    <div class="build_info">
+      <h3 class="build_topic">
+        <img src="assets/icons/itemization.png" alt="Itemization Icon"> Itemization:
+      </h3>
+      <p class="build_topic_info">${itemization}</p>
+
+      <h3 class="build_topic">
+        <img src="assets/icons/strategy.png" alt="Strategy Icon"> Strategy:
+      </h3>
+      <p class="build_topic_info">${strategy}</p>
+
+      <h3 class="build_topic">
+        <img src="assets/icons/options.png" alt="Options Icon"> Options:
+      </h3>
+      <p class="build_topic_info">${options}</p>
+
+      <h3 class="build_topic">
+        <img src="assets/icons/lvl9.png" alt="Level 9 Icon"> Level 9:
+      </h3>
+      <p class="build_topic_info">${lvl9}</p>
+
+      <h3 class="build_topic">
+        <img src="assets/icons/conditions.png" alt="Conditions Icon"> Conditions:
+      </h3>
+      <p class="build_topic_info">${conditions}</p>
+
+      <h3 class="build_topic">
+        <img src="assets/icons/augments.png" alt="Augments Icon"> Augments:
+      </h3>
+      <p class="build_topic_info">${augments}</p>
+
+      <h3 class="build_topic">
+        <img src="assets/icons/anomaly.png" alt="Anomaly Icon"> Anomaly:
+      </h3>
+      <p class="build_topic_info">${anomaly}</p>
+    </div>
+  `;
+
+        currentChild.insertAdjacentElement("afterend", build_open);
+      }
+
+      // Generate the buttons and store data in data-* attributes
+
+      const build_button = `
+     
+  <button 
+    onclick="showbuild(this)" 
+    class="Comp_icon" 
+    data-tier="${tier}" 
+    data-name="${name}" 
+    data-champion_icon="${champion_icon}" 
+    data-itemization="${itemization}" 
+    data-strategy="${strategy}" 
+    data-options="${options}" 
+    data-lvl9="${lvl9}" 
+    data-conditions="${conditions}" 
+    data-augments="${augments}" 
+    data-anomaly="${anomaly}">
+    <!-- <div class="hover_square"></div> -->
+    <img src="assets/champ_icons/${champion_icon}.png" alt="${champion_icon}" />
+  </button>`;
+
+      if (tier.toLowerCase().startsWith("s")) {
+        tier_s.append(build_button);
+      } else if (tier.toLowerCase().startsWith("a")) {
+        tier_a.append(build_button);
+      } else if (tier.toLowerCase().startsWith("b")) {
+        tier_b.append(build_button);
+      }
+    }
+  </script>
+</html>
