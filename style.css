@@ -10,45 +10,49 @@
 
   --main_font: "Fjalla One";
   --secondary_font: "Poppins";
-  --font_weight :500;
+  --font_weight: 500;
 }
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
-    font-family: var(--main_font);
-    font-weight: bold;
-    color: var(--secondary_color);
-    /* color: rgb(165, 75, 153); */
-    border: none;
+  font-family: var(--main_font);
+  font-weight: bold;
+  color: var(--secondary_color);
+  /* color: rgb(165, 75, 153); */
+  border: none;
 
-    border-radius: 20px;
-  }
-  /*  css Reset  */
-  html,
-  body {
-    background-color: var(--bg-color);
-    height: 100%;
-    line-height: 1;
-    font-size: 100%;
-    margin: 1rem;
-  }
+  border-radius: 20px;
+}
+/*  css Reset  */
+html,
+body {
+  background-color: var(--bg-color);
+  height: 100%;
+  line-height: 1;
+  font-size: 100%;
+  margin: 1rem;
+}
 
-  /* Nav bar*/
+/* Nav bar*/
 
-  /* Reset */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-  }
+body {
+  font-family: Arial, sans-serif;
+}
 
 /* Navbar container */
+
+
+
+
 .navbar {
   width: 70%;
   margin: auto;
@@ -144,9 +148,16 @@
 /* Page title */
 #Box_title {
   text-align: center;
-  font-size: xx-large;
-  margin: 2rem;
+  font-size: 300%;
+  margin: 3rem;
   color: var(--main_color);
+}
+#Box_title img{
+  
+  width:90px;
+  position: absolute;
+  transform: translateX(-50%) translateY(-30%); /* Centers the image vertically */
+  margin-left: 50px;
 }
 
 /*Comp tier list*/
@@ -235,7 +246,6 @@
   opacity: 0.5;
 }
 
-
 .Comp_icon.clicked {
   height: 4rem;
   width: 4rem;
@@ -290,14 +300,14 @@
 }
 .build_topic_info {
   font-family: var(--secondary_font);
-  font-weight:  var(--font_weight);
+  font-weight: var(--font_weight);
   padding: 1rem;
   color: var(--bg-color);
   background: rgba(255, 255, 255, 0.377);
 }
 .info {
   font-family: var(--secondary_font);
-  font-weight:  var(--font_weight);
+  font-weight: var(--font_weight);
   padding: 1rem;
   color: var(--bg-color);
   background: rgba(255, 255, 255, 0.575);
@@ -312,7 +322,6 @@
   border-radius: 0;
   width: 30px;
 }
-
 
 a {
   font-family: var(--secondary_font);
@@ -330,7 +339,6 @@ a {
   padding-top: 1.5rem;
 }
 .profile {
- 
   word-wrap: break-word;
   background-color: var(--main_color);
 
@@ -346,9 +354,9 @@ a {
   margin-top: 2rem;
   padding: 1rem;
 }
-.profile_info{
+.profile_info {
   width: 70%;
-  max-width: 100%; 
+  max-width: 100%;
 }
 
 .profile_icon {
@@ -367,11 +375,7 @@ a {
   border-radius: 40%;
 }
 
-
-
 .profile_info .info {
-
-
   padding: 1rem;
 }
 
@@ -455,7 +459,7 @@ a {
 .second,
 .third {
   font-family: var(--secondary_font);
-  font-weight:  var(--font_weight);
+  font-weight: var(--font_weight);
   color: rgb(255, 255, 255);
 }
 
