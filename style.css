@@ -50,9 +50,6 @@ body {
 
 /* Navbar container */
 
-
-
-
 .navbar {
   width: 70%;
   margin: auto;
@@ -152,9 +149,8 @@ body {
   margin: 3rem;
   color: var(--main_color);
 }
-#Box_title img{
-  
-  width:90px;
+#Box_title img {
+  width: 90px;
   position: absolute;
   transform: translateX(-50%) translateY(-30%); /* Centers the image vertically */
   margin-left: 50px;
@@ -188,6 +184,14 @@ body {
   margin-bottom: 1rem;
 }
 
+.tier_info {
+  color: aliceblue;
+  font-family: var(--secondary_font);
+  font-size: small;
+  font-weight: 200;
+  text-align: right;
+}
+
 .tier_icon {
   position: absolute;
   left: 0; /* Aligns the image to the left of the .Comp_tier */
@@ -203,11 +207,11 @@ body {
 }
 
 #tier_icon_a {
-  width: 6.5rem;
+  width: 7.5rem;
 }
 
 #tier_icon_b {
-  width: 8rem;
+  width: 9rem;
 }
 
 .Comp_icon {

@@ -32,11 +32,13 @@
     </div>
 
     <div id="Box_title">
-      Reunic's Comp Tierlist<img src="assets/logo/logo.png" alt="" />
+      Reunic's Comp Tierlist<img src="assets/logo/logo.png " alt="" />
     </div>
     <!-- Comp tier list -->
     <div id="Box_tier_list">
-      <div id="Tier_list">
+      <div id="Tier_list"><div class="tier_info">
+        * Consistent Firsts or Top 4 with minimal conditions
+      </div>
         <div id="s_tier" class="Comp_tier">
           <img
             id="tier_icon_s"
@@ -44,12 +46,17 @@
             src="assets/tier icons/evolution 3.png"
           />
         </div>
+        <div class="tier_info">
+          * Consistent Top 4 with some conditions or important conditions
+        </div>
         <div id="a_tier" class="Comp_tier">
           <img
             id="tier_icon_a"
             class="tier_icon"
             src="assets/tier icons/evolution 2.png"
           />
+        </div><div class="tier_info">
+          * Multiple conditions for little benefit
         </div>
         <div id="b_tier" class="Comp_tier">
           <img
@@ -61,6 +68,7 @@
         <p></p>
       </div>
     </div>
+    /
   </body>
   <div class="build_info"></div>
 
@@ -320,6 +328,8 @@
     let tier_a = $("#a_tier");
     let tier_b = $("#b_tier");
 
+    const reuniclus_sound = new Audio("assets/sound/Reuniclus_sound.mp3");
+
     for (let i = 0; i < builds.length; i++) {
       let build_obj = builds[i];
       let {
@@ -371,53 +381,57 @@
 
         // If a different build is open, remove it
         if (openBuild) {
-          openBuild.remove(); // Close the previously opened build
+          openBuild.remove();
+          // Close the previously opened build
         }
+
+        reuniclus_sound.play();
+        reuniclus_sound.volume = 0.2;
 
         // Create and open the new build info
         const build_open = document.createElement("div");
         build_open.className = "build_open";
         build_open.id = name;
         build_open.innerHTML = `
-    <h1>${name}</h1>
-    <img src="assets/builds/${name}.png" alt="" srcset="">
-    <div class="build_info">
-      <h3 class="build_topic">
-        <img src="assets/icons/itemization.png" alt="Itemization Icon"> Itemization:
-      </h3>
-      <p class="build_topic_info">${itemization}</p>
+          <h1>${name}</h1>
+          <img src="assets/builds/${name}.png" alt="" srcset="">
+          <div class="build_info">
+          <h3 class="build_topic">
+            <img src="assets/icons/itemization.png" alt="Itemization Icon"> Itemization:
+          </h3>
+          <p class="build_topic_info">${itemization}</p>
 
-      <h3 class="build_topic">
-        <img src="assets/icons/strategy.png" alt="Strategy Icon"> Strategy:
-      </h3>
-      <p class="build_topic_info">${strategy}</p>
+          <h3 class="build_topic">
+            <img src="assets/icons/strategy.png" alt="Strategy Icon"> Strategy:
+          </h3>
+          <p class="build_topic_info">${strategy}</p>
 
-      <h3 class="build_topic">
-        <img src="assets/icons/options.png" alt="Options Icon"> Options:
-      </h3>
-      <p class="build_topic_info">${options}</p>
+          <h3 class="build_topic">
+            <img src="assets/icons/options.png" alt="Options Icon"> Options:
+          </h3>
+          <p class="build_topic_info">${options}</p>
 
-      <h3 class="build_topic">
-        <img src="assets/icons/lvl9.png" alt="Level 9 Icon"> Level 9:
-      </h3>
-      <p class="build_topic_info">${lvl9}</p>
+          <h3 class="build_topic">
+            <img src="assets/icons/lvl9.png" alt="Level 9 Icon"> Level 9:
+          </h3>
+          <p class="build_topic_info">${lvl9}</p>
 
-      <h3 class="build_topic">
-        <img src="assets/icons/conditions.png" alt="Conditions Icon"> Conditions:
-      </h3>
-      <p class="build_topic_info">${conditions}</p>
+          <h3 class="build_topic">
+            <img src="assets/icons/conditions.png" alt="Conditions Icon"> Conditions:
+          </h3>
+          <p class="build_topic_info">${conditions}</p>
 
-      <h3 class="build_topic">
-        <img src="assets/icons/augments.png" alt="Augments Icon"> Augments:
-      </h3>
-      <p class="build_topic_info">${augments}</p>
+          <h3 class="build_topic">
+            <img src="assets/icons/augments.png" alt="Augments Icon"> Augments:
+          </h3>
+          <p class="build_topic_info">${augments}</p>
 
-      <h3 class="build_topic">
-        <img src="assets/icons/anomaly.png" alt="Anomaly Icon"> Anomaly:
-      </h3>
-      <p class="build_topic_info">${anomaly}</p>
-    </div>
-  `;
+          <h3 class="build_topic">
+            <img src="assets/icons/anomaly.png" alt="Anomaly Icon"> Anomaly:
+          </h3>
+          <p class="build_topic_info">${anomaly}</p>
+        </div>
+      `;
 
         currentChild.insertAdjacentElement("afterend", build_open);
       }
